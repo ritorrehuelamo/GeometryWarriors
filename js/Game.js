@@ -3,7 +3,8 @@ $(document).ready(function() {
   var board = new Board(player.x, player.y)
 	var keys = {},
     bullets = [],
-    fps = 30
+    fps = 30,
+		score
 
   setInterval(update, 1000 / fps)
 
@@ -40,17 +41,22 @@ $(document).ready(function() {
 
   function shotCollisionToEnemy() {
     monsters.forEach((monster, index) => {
-      var collision = $('.shot').collision(monster.enemy)
-			if (collision[0]) {
-        $('.shot').remove()
-        bullets = []
-				$("#" + monster.id).remove()
-				fillFullMonsters(desiredNumberOfMonsters)
-				monsters.splice(index, 1)
-				var score = player.score+=1
-				console.log(score)
-				$('.score').text('SCORE: ' + score)
-      }
+
+      if (player.score < 10 ) {
+				var collision = $('.shot').collision(monster.enemy)
+				if (collision[0]) {
+	        $('.shot').remove()
+	        bullets = []
+					$("#" + monster.id).remove()
+					fillFullMonsters(desiredNumberOfMonsters)
+					monsters.splice(index, 1)
+					score = player.score+=1
+					console.log(score)
+					$('.score').text('SCORE: ' + score)
+	      }
+      }else{
+				$('.score').text('YOU WIN!!!')
+			}
     })
   }
 

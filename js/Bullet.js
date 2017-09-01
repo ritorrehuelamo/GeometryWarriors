@@ -8,6 +8,7 @@ function Bullet (x, y) {
 			position: 'absolute'
 		})
 	$('#board').append(this.bullet)
+	this.direction = 'left'
 }
 
 Bullet.prototype = Object.create(Positionable.prototype)
