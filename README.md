@@ -1,1 +1,1 @@
-# GemoetryWarriors
+# GeometryWarriors
