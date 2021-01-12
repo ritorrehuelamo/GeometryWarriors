@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Geometry Warriors</title>
+</head>
+<script src="pixi/pixi.min.js"></script>
+<body>
+<script type="text/javascript">
+    let type = "WebGL"
+    if (!PIXI.utils.isWebGLSupported()) {
+        type = "canvas";
+    }
+
+    const pixiOptions = {
+        width: (window.innerWidth > 0) ? window.innerWidth : screen.width,
+        height: (window.innerHeight > 0) ? window.innerHeight : screen.height,
+        antialias: true,
+        transparent: false,
+        resolution: 1
+    };
+
+    PIXI.utils.sayHello(type);
+    let app = new PIXI.Application(pixiOptions);
+    document.body.appendChild(app.view);
+</script>
+</body>
+</html>

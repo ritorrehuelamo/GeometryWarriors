@@ -1,0 +1,27 @@
+{
+  "name": "geometry-warriors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "http-server ./public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ritorrehuelamo/GeometryWarriors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ritorrehuelamo/GeometryWarriors/issues"
+  },
+  "homepage": "https://github.com/ritorrehuelamo/GeometryWarriors#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
